@@ -1,6 +1,6 @@
 <template>
     <header>
-        <div class="flex-row justify-content-space-between align-items-center container">
+        <div class="flex-row-space-between container">
             <h1>Where in the world?</h1>
             <ThemeToggle />
         </div>

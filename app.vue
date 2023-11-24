@@ -2,7 +2,7 @@
   <div>
     <TheHeader />
     <main class="container">
-      hjkh
+      <HomePageControls />
     </main>
   </div>
 </template>
