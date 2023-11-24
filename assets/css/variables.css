@@ -1,0 +1,63 @@
+:root {
+
+    /* Colors */
+
+    /* Neutral */
+    /*  (Dark Mode Elements) */
+    --Dark-Blue: hsl(209, 23%, 22%);
+    /* (Dark Mode Background) */
+    --very-dark-blue-lighter: hsl(207, 26%, 17%);
+    /* (Light Mode Text) */
+    --very-dark-blue: hsl(200, 15%, 8%);
+    /* (Light Mode Input) */
+    --dark-gray: hsl(0, 0%, 52%);
+    /* (Light Mode Background) */
+    --very-light-gray: hsl(0, 0%, 98%);
+    /* (Dark Mode Text & Light Mode Elements) */
+    --white: hsl(0, 0%, 100%);
+
+    /* Typography */
+
+    --font-size-200: 10px;
+    --font-size-300: 12px;
+    --font-size-400: 14px;
+    --font-size-500: 16px;
+    --font-size-600: 22px;
+    --font-size-700: 24px;
+    --font-size-1000: 30px;
+
+    --font-family: 'Nunito Sans', sans-serif;
+
+    --font-weight-normal: 300;
+    --font-weight-bold: 600;
+    --font-weight-bolder: 800;
+
+    --line-height-heading: 1.1;
+    --line-height-base: 1.5;
+
+
+    /* Spacing */
+    --spacing-200: 0.5rem;
+    --spacing-300: 0.75rem;
+    --spacing-400: 1rem;
+    --spacing-500: 1.25rem;
+    --spacing-600: 1.5rem;
+    --spacing-700: 1.75rem;
+    --spacing-800: 2rem;
+    --spacing-900: 2.5rem;
+    --spacing-1000: 3.5rem;
+
+    /* Other */
+    --border-radius-soft: 10px;
+
+
+    --box-shadow: 2px 2px 8px rgba(0 0 0 / 0.2);
+
+
+
+    /* Layout - The designs were created to the following widths:
+
+        - Mobile: 375px
+        - Desktop: 1440px */
+
+}
