@@ -1,9 +1,6 @@
 <template>
   <div>
-    <TheHeader />
-    <main class="container">
-      <HomePageControls />
-    </main>
+    <NuxtPage />
   </div>
 </template>
 
