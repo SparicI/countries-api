@@ -1,6 +1,6 @@
 <template>
     <div>
-        <TheHeader />
+        <!-- <TheHeader /> -->
         <main class="container">
             <HomePageControls />
 
@@ -35,7 +35,6 @@ type CountriesData = {
 }
 
 const { data } = await useFetch<CountriesData[]>(() => `${config.public.BASE_URL}/data.json`)
-console.log(data)
 
 </script>
 

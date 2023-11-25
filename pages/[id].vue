@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>{{ route.params.name }}</h1>
+        <h1>{{ route.params.id }}</h1>
     </div>
 </template>
 
@@ -8,6 +8,7 @@
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
+console.log("Route", route)
 
 </script>
 
