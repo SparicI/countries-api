@@ -10,9 +10,6 @@
                     :country=country
                     :key=country?.name
                 />
-
-
-
             </div>
 
         </main>
@@ -20,10 +17,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+const config = useRuntimeConfig()
 
-
-type CountriesData = [{
+type CountriesData = {
     name: string,
     nativeName: string,
     capital: string,
@@ -36,13 +32,10 @@ type CountriesData = [{
     currencies: string,
     borders: string[],
     languages: string[]
+}
 
-}]
-
-const { data, pending, error } = await useFetch<CountriesData>("http://localhost:3000/data.json")
-
-
-
+const { data } = await useFetch<CountriesData[]>(() => `${config.public.BASE_URL}/data.json`)
+console.log(data)
 
 </script>
 

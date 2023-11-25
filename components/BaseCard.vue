@@ -1,6 +1,6 @@
 <template>
     <article class="card">
-        <NuxtLink>
+        <NuxtLink :to="`/${country.name}`">
             <img
                 :src="`${country?.flags.png}`"
                 :alt="`${country?.flags.alt}`"
