@@ -15,8 +15,16 @@
     width: 50%;
 }
 
-.margin-block-start-300 {
-    margin-block-start: var(--spacing-300);
+.margin-block-start-800 {
+    margin-block-start: var(--spacing-800);
+}
+
+.margin-block-end-400 {
+    margin-block-end: var(--spacing-400);
+}
+
+.margin-block-1000 {
+    margin-block: var(--spacing-1000);
 }
 
 .margin-block-end-300 {
@@ -27,8 +35,8 @@
     text-transform: uppercase;
 }
 
-.font-size-500 {
-    font-size: var(--font-size-500) !important;
+.font-weight-bold {
+    font-weight: var(--font-weight-bold);
 }
 
 

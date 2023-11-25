@@ -4,11 +4,17 @@
         <main class="container">
             <HomePageControls />
 
-            <NuxtLink
-                v-for="id in ids"
-                :to="`${id}`"
-                style="paddingInline: 1rem"
-            >{{ id }}</NuxtLink>
+            <div class="card-container margin-block-1000">
+                <BaseCard
+                    v-for="country in data"
+                    :country=country
+                    :key=country?.name
+                />
+
+
+
+            </div>
+
         </main>
     </div>
 </template>
@@ -16,8 +22,42 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-const ids = ref([1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+type CountriesData = [{
+    name: string,
+    nativeName: string,
+    capital: string,
+    continents: string,
+    flag: string,
+    population: number,
+    region: string,
+    subregion: string,
+    topLevelDomain: string,
+    currencies: string,
+    borders: string[],
+    languages: string[]
+
+}]
+
+const { data, pending, error } = await useFetch<CountriesData>("http://localhost:3000/data.json")
+
+
+
 
 </script>
 
-<style scoped></style>
+<style scoped>
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    justify-content: center;
+    gap: var(--spacing-1100);
+}
+
+@media screen and (min-width: 1200px) {
+    .card-container {
+        justify-content: space-between;
+
+    }
+}
+</style>

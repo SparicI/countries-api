@@ -39,13 +39,15 @@
     --spacing-700: 1.75rem;
     --spacing-800: 2rem;
     --spacing-900: 2.5rem;
-    --spacing-1000: 3.5rem;
+    --spacing-1000: 3rem;
+    --spacing-1100: 4rem;
 
     /* Other */
-    --border-radius-soft: 10px;
+    --border-radius-soft: 5px;
 
 
     --box-shadow: 2px 2px 4px rgba(0 0 0 / 0.1);
+    --box-shadow-card: 1px 1px 8px rgba(0 0 0 / 0.05);
 
 
 
