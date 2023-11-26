@@ -36,9 +36,9 @@
                                 data?.currencies[0]?.name : '' }}</span>
                             </p>
                             <p><span class="font-weight-bold">Languages:</span> <span
-                                    v-for="language in data?.languages"
+                                    v-for="(language, index) in data?.languages"
                                     :key="language?.name"
-                                >{{ data?.name }}</span></p>
+                                >{{ language?.name }}{{ index !== data?.languages.length - 1 ? ', ' : '' }}</span></p>
 
                         </div>
                         <div>
@@ -72,7 +72,11 @@ const goToPreviousPage = () => router.go(-1)
     width: min(100%, 560px);
     height: 100%;
     object-fit: cover;
+}
 
+.detail-container {
+    display: grid;
+    gap: var(--spacing-1000);
 }
 
 @media screen and (min-width: 1024px) {
@@ -80,13 +84,12 @@ const goToPreviousPage = () => router.go(-1)
         display: grid;
         grid-template-rows: 400px;
         grid-template-columns: repeat(2, 1fr);
-        gap: 7rem
+        gap: 7rem;
     }
 
     .detail-container {
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 4rem;
+
     }
 }
 </style>
