@@ -3,7 +3,7 @@
         <div>
             <button
                 type="button"
-                class="button margin-block-1000"
+                class="controls padding-button margin-block-1000"
                 @click="goToPreviousPage"
             >
                 <span class="margin-inline-end-200">
@@ -48,9 +48,8 @@
                                     v-for="item in data?.borders"
                                     :to="`/${findCountryName(item)}`"
                                     :key="item"
-                                    class="button"
+                                    class="controls padding-button"
                                 >
-
                                     {{ findCountryName(item) }}
                                 </NuxtLink>
 

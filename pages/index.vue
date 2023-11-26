@@ -1,11 +1,14 @@
 <template>
     <div>
         <main class="container">
-            <HomePageControls />
+            <div class="flex-row-space-between-ld margin-block-start-800">
+                <SearchQueryFilter v-model="searchQuery" />
+                <SearchByRegionFilter />
+            </div>
 
             <div class="card-container margin-block-1000">
                 <BaseCard
-                    v-for="country in data"
+                    v-for="country in filteredData"
                     :country=country
                     :key=country?.name
                 />
@@ -17,8 +20,18 @@
 
 <script setup lang="ts">
 import { useCustomFetch } from '~/composables/useCustomFetch';
+import type { CountriesData } from '../types'
 
 const data = await useCustomFetch()
+const filteredData = ref<CountriesData[]>([])
+const searchQuery = ref('')
+
+filteredData.value = data as CountriesData[]
+
+watch(searchQuery, () => {
+    filteredData.value = data?.filter(item => item?.name.toLowerCase().includes(searchQuery?.value?.toLowerCase())) as CountriesData[]
+})
+
 
 </script>
 

@@ -1,0 +1,27 @@
+.controls {
+    border: none;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius-soft);
+    background-color: var(--surface-color);
+    color: inherit;
+    text-decoration: none;
+}
+
+input[type="text"],
+select {
+    padding: var(--spacing-400) var(--spacing-800);
+}
+
+input[type="text"] {
+    padding-inline-start: var(--spacing-1100);
+    width: min(480px, 100%);
+}
+
+input[type="text"]:focus+label {
+    display: none;
+}
+
+select {
+    padding-block: 1.15rem;
+    max-width: 200px;
+}
