@@ -28,6 +28,9 @@ export default defineNuxtConfig({
     classPrefix: '',
     classSuffix: '-mode',
     storageKey: 'nuxt-color-mode'
-  }
+  },
+  imports: {
+    dirs: ['types/*.ts', 'store/*.ts', 'types/**/*.ts'],
+  },
 
 })

@@ -1,6 +1,5 @@
 <template>
     <div>
-        <!-- <TheHeader /> -->
         <main class="container">
             <HomePageControls />
 
@@ -17,24 +16,9 @@
 </template>
 
 <script setup lang="ts">
-const config = useRuntimeConfig()
+import { useCustomFetch } from '~/composables/useCustomFetch';
 
-type CountriesData = {
-    name: string,
-    nativeName: string,
-    capital: string,
-    continents: string,
-    flag: string,
-    population: number,
-    region: string,
-    subregion: string,
-    topLevelDomain: string,
-    currencies: string,
-    borders: string[],
-    languages: string[]
-}
-
-const { data } = await useFetch<CountriesData[]>(() => `${config.public.BASE_URL}/data.json`)
+const data = await useCustomFetch()
 
 </script>
 
