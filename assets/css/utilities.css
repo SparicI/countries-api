@@ -27,6 +27,10 @@
     margin-block: var(--spacing-1000);
 }
 
+.margin-inline-end-200 {
+    margin-inline-end: var(--spacing-200);
+}
+
 .margin-block-end-300 {
     margin-block-end: var(--spacing-300);
 }

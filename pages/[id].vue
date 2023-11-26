@@ -1,7 +1,14 @@
 <template>
-    <main>
+    <main class="container">
         <div>
-            <button type="button">
+            <button
+                type="button"
+                class="button margin-block-1000"
+                @click="goToPreviousPage"
+            >
+                <span class="margin-inline-end-200">
+                    &#8592;
+                </span>
                 Back
             </button>
             <div class="flex">
@@ -23,7 +30,8 @@
                     <div>
                         <p><span class="font-weight-bold">Top Level Domain:</span> <span>{{ data?.topLevelDomain[0]
                         }}</span></p>
-                        <p><span class="font-weight-bold">Currencies:</span> <span>{{ data?.currencies[0]?.name }}</span>
+                        <p><span class="font-weight-bold">Currencies:</span> <span>{{ data?.currencies ?
+                            data?.currencies[0]?.name : '' }}</span>
                         </p>
                         <p><span class="font-weight-bold">Languages:</span> <span
                                 v-for="language in data?.languages"
@@ -46,11 +54,14 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 const route = useRoute()
+const router = useRouter()
 
 const id: string | string[] = route.params.id
-
 const data = await useData(id)
-console.log("Data from id page", data)
+// console.log("Data from id page", data)
+
+// Go to previous page
+const goToPreviousPage = () => router.go(-1)
 
 </script>
 
