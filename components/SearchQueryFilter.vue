@@ -2,7 +2,7 @@
     <div class="flex-1 position-relative">
         <img
             class="search__icon"
-            src="../magnifier-search.svg"
+            src="/magnifier-search.svg"
             alt=""
         >
 
