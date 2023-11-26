@@ -5,4 +5,5 @@
     border-radius: var(--border-radius-soft);
     background-color: var(--surface-color);
     color: inherit;
+    text-decoration: none;
 }

@@ -41,8 +41,20 @@
                                 >{{ language?.name }}{{ index !== data?.languages.length - 1 ? ', ' : '' }}</span></p>
 
                         </div>
-                        <div>
+                        <div class="grid-column-span-2">
                             <p class="font-weight-bold">Border countries:</p>
+                            <div class="borders-wrapper">
+                                <NuxtLink
+                                    v-for="item in data?.borders"
+                                    :to="`/${findCountryName(item)}`"
+                                    :key="item"
+                                    class="button"
+                                >
+
+                                    {{ findCountryName(item) }}
+                                </NuxtLink>
+
+                            </div>
 
                         </div>
                     </div>
@@ -58,6 +70,9 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 const router = useRouter()
 
+const allCountries = await useCustomFetch()
+
+// Get data for specific country
 const id: string | string[] = route.params.id
 const data = await useData(id)
 // console.log("Data from id page", data)
@@ -65,18 +80,33 @@ const data = await useData(id)
 // Go to previous page
 const goToPreviousPage = () => router.go(-1)
 
+// Find specific country name by 'cioc' field
+
+const findCountryName = (countryCode: string) => {
+    const country = allCountries?.find(country => country?.alpha3Code === countryCode)
+    return country?.name
+}
+
 </script>
 
 <style scoped>
 .country__flag {
     width: min(100%, 560px);
     height: 100%;
+    max-height: 400px;
     object-fit: cover;
 }
 
 .detail-container {
     display: grid;
     gap: var(--spacing-1000);
+}
+
+.borders-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-200);
+    margin-block-start: var(--spacing-600);
 }
 
 @media screen and (min-width: 1024px) {

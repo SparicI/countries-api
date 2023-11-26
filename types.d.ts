@@ -7,6 +7,7 @@ export type CountriesData = {
     region: string,
     subregion: string,
     topLevelDomain: string,
+    alpha3Code: string,
     currencies: Record<string, unknown>[],
     flags: Record<string, string>,
     borders: string[],

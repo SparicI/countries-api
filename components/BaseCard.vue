@@ -3,7 +3,10 @@
         <NuxtLink :to="`/${country.name}`">
             <NuxtImg
                 :src="`${country?.flags?.png}`"
-                :alt="`${country?.flags?.alt}`"
+                :alt="`${country?.name}`"
+                height="160"
+                width="250"
+                loading="lazy"
                 class="card__image"
             />
         </NuxtLink>
