@@ -11,6 +11,10 @@ button {
     cursor: pointer;
 }
 
+p {
+    margin-block: var(--spacing-100)
+}
+
 
 @supports(height: 100dvh) {
     main {

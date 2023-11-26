@@ -1,11 +1,11 @@
 <template>
     <article class="card">
         <NuxtLink :to="`/${country.name}`">
-            <img
-                :src="`${country?.flags.png}`"
-                :alt="`${country?.flags.alt}`"
+            <NuxtImg
+                :src="`${country?.flags?.png}`"
+                :alt="`${country?.flags?.alt}`"
                 class="card__image"
-            >
+            />
         </NuxtLink>
 
         <div class="card__description">

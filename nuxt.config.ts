@@ -18,7 +18,7 @@ export default defineNuxtConfig({
   css: [
     '@/assets/css/main.css',
   ],
-  modules: ['@nuxtjs/color-mode'],
+  modules: ['@nuxtjs/color-mode', '@nuxt/image',],
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
     fallback: 'light', // fallback value if not system preference found

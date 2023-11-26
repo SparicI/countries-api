@@ -19,6 +19,10 @@
     margin-block-start: var(--spacing-800);
 }
 
+.margin-block-800 {
+    margin-block: var(--spacing-800);
+}
+
 .margin-block-end-400 {
     margin-block-end: var(--spacing-400);
 }
@@ -37,6 +41,10 @@
 
 .text-transform-uppercase {
     text-transform: uppercase;
+}
+
+.padding-block-800 {
+    padding-block: var(--spacing-800);
 }
 
 .font-weight-bold {
