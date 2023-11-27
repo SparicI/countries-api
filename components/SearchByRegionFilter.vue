@@ -1,6 +1,11 @@
 <template>
     <div class="position-relative width-200">
+        <label
+            for="choose-region"
+            class="visually-hidden"
+        >Choose Region</label>
         <select
+            id="choose-region"
             class="flex-1 controls margin-block-start-800"
             :value="modelValue"
             @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)"

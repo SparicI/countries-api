@@ -1,6 +1,13 @@
 <template>
     <div class="position-relative">
-        <select v-model="$colorMode.preference">
+        <label
+            for="theme-toggle"
+            class="visually-hidden"
+        >Choose Theme</label>
+        <select
+            v-model="$colorMode.preference"
+            id="theme-toggle"
+        >
             <option value="system">System</option>
             <option value="light">Light Mode</option>
             <option value="dark">Dark Mode</option>
@@ -43,5 +50,4 @@ select {
     width: 20px;
     top: 7px;
     left: 0px;
-}
-</style>
+}</style>
