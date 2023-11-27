@@ -1,10 +1,25 @@
 <template>
-    <select v-model="$colorMode.preference">
-        <option value="system">System</option>
-        <option value="light">Light Mode</option>
-        <option value="dark">Dark Mode</option>
-        <option value="sepia">Sepia</option>
-    </select>
+    <div class="position-relative">
+        <select v-model="$colorMode.preference">
+            <option value="system">System</option>
+            <option value="light">Light Mode</option>
+            <option value="dark">Dark Mode</option>
+            <option value="sepia">Sepia</option>
+        </select>
+        <img
+            v-if="colorMode.preference === 'dark'"
+            src="/icon-moon.svg"
+            alt=""
+            class="theme-image"
+        >
+        <img
+            v-else
+            src="/icon-sun.svg"
+            alt=""
+            class="theme-image"
+        >
+
+    </div>
 </template>
 
 <script setup>
@@ -15,17 +30,17 @@ const colorMode = useColorMode()
 
 <style scoped>
 select {
-    background-image: url(/icon-sun.svg);
-    background-repeat: no-repeat;
-    background-size: 0.75rem;
-    background-position: 0px 10px;
     background-color: inherit;
     color: inherit;
     border: none;
-    padding: var(--spacing-200) var(--spacing-400);
+    padding-inline: var(--spacing-800);
+    -webkit-appearance: none;
 }
 
-.dark-mode select {
-    background-image: url(/icon-moon.svg);
+.theme-image {
+    position: absolute;
+    width: 20px;
+    top: 15px;
+    left: 0px;
 }
 </style>
