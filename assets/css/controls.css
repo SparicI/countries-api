@@ -20,8 +20,3 @@ input[type="text"] {
 input[type="text"]:focus+label {
     display: none;
 }
-
-select {
-    padding-block: 1.15rem;
-    max-width: 200px;
-}

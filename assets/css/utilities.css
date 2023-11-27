@@ -67,6 +67,10 @@
     position: relative;
 }
 
+.width-200 {
+    width: 200px;
+}
+
 
 /* Hide from screen */
 .visually-hidden {

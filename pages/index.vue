@@ -3,7 +3,7 @@
         <main class="container">
             <div class="flex-row-space-between-ld margin-block-start-800">
                 <SearchQueryFilter v-model="searchQuery" />
-                <SearchByRegionFilter />
+                <SearchByRegionFilter v-model="selectedRegion" />
             </div>
 
             <div class="card-container margin-block-1000">
@@ -25,12 +25,27 @@ import type { CountriesData } from '../types'
 const data = await useCustomFetch()
 const filteredData = ref<CountriesData[]>([])
 const searchQuery = ref('')
+const selectedRegion = ref('all')
 
 filteredData.value = data as CountriesData[]
 
 watch(searchQuery, () => {
-    filteredData.value = data?.filter(item => item?.name.toLowerCase().includes(searchQuery?.value?.toLowerCase())) as CountriesData[]
+    filterData()
 })
+
+watch(selectedRegion, () => {
+    filterData()
+})
+
+const filterData = () => {
+    filteredData.value = data?.filter(item => item?.name.toLowerCase().includes(searchQuery?.value?.toLowerCase())) as CountriesData[]
+    if (selectedRegion.value === 'all') {
+        return
+    } else {
+        filteredData.value = filteredData.value.filter(item => item?.region === selectedRegion.value) as CountriesData[]
+    }
+
+}
 
 
 </script>
