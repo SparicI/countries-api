@@ -33,6 +33,7 @@ select {
     background-color: inherit;
     color: inherit;
     border: none;
+    padding-block: var(--spacing-200);
     padding-inline: var(--spacing-800);
     -webkit-appearance: none;
 }
@@ -40,7 +41,7 @@ select {
 .theme-image {
     position: absolute;
     width: 20px;
-    top: 15px;
+    top: 7px;
     left: 0px;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div>
         <main class="container">
-            <div class="flex-row-space-between-ld margin-block-start-800">
+            <div class="flex-row-space-between-ld">
                 <SearchQueryFilter v-model="searchQuery" />
                 <SearchByRegionFilter v-model="selectedRegion" />
             </div>
