@@ -1,7 +1,11 @@
 <template>
     <header>
         <div class="flex-row-space-between container">
-            <h1>Where in the world?</h1>
+            <h1>
+                <NuxtLink to="/">
+                    Where in the world?
+                </NuxtLink>
+            </h1>
             <ThemeToggle />
         </div>
 

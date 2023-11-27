@@ -37,7 +37,7 @@ defineProps(['modelValue'])
 defineEmits(['update:modelValue'])
 
 const colorMode = useColorMode()
-console.log(colorMode.preference)
+// console.log(colorMode.preference)
 
 </script>
 

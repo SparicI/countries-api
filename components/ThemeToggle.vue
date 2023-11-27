@@ -1,5 +1,4 @@
 <template>
-    <!-- <p>Color mode: {{ $colorMode.value }}</p> -->
     <select v-model="$colorMode.preference">
         <option value="system">System</option>
         <option value="light">Light Mode</option>
@@ -10,7 +9,7 @@
 
 <script setup>
 const colorMode = useColorMode()
-console.log(colorMode.preference)
+// console.log(colorMode.preference)
 
 </script>
 
@@ -19,7 +18,7 @@ select {
     background-image: url(/icon-sun.svg);
     background-repeat: no-repeat;
     background-size: 0.75rem;
-    background-position: left center;
+    background-position: 0px 10px;
     background-color: inherit;
     color: inherit;
     border: none;

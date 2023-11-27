@@ -11,6 +11,11 @@ button {
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 p {
     margin-block: var(--spacing-100)
 }

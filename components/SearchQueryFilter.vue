@@ -1,10 +1,19 @@
 <template>
     <div class="flex-1 position-relative">
+
         <img
+            v-if="colorMode.preference === 'dark'"
             class="search__icon"
-            src="/magnifier-search.svg"
+            src="/magnifier-search-white.svg"
             alt=""
         >
+        <img
+            v-else
+            class="search__icon"
+            src="/magnifier-search-dark.svg"
+            alt=""
+        >
+
 
         <input
             class="controls"
@@ -26,6 +35,8 @@
 <script setup lang="ts">
 defineProps(['modelValue'])
 defineEmits(['update:modelValue'])
+
+const colorMode = useColorMode()
 
 </script>
 
